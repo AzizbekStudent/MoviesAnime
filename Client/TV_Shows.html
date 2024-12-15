@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+</head>
+<body>
+
+    <div id="layout-container"></div>  
+
+    <script>
+        fetch('layout.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+
+                document.getElementById('content').innerHTML = `
+                    <h2>Movies List</h2>
+                    <ul>
+                        <li>Movie 1</li>
+                        <li>Movie 2</li>
+                        <li>Movie 3</li>
+                    </ul>
+                `;
+            });
+    </script>
+</body>
+</html>

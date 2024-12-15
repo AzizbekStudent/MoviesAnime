@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Layout</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Cinema</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Movies.html">Movies</a></li>
+                <li><a href="./Anime.html">Anime</a></li>
+                <li><a href="./TV_Shows.html">TV Shows</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Developed for home Usage</p>
+    </footer>
+
+
+    <!--Firebase connection important libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+   
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+    </script>
+   
+    <!--For displaying charts-->    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--Script.js file-->
+    <script  type="text/javascript" src="./clientScript.js" ></script>
+
+</body>
+</html>

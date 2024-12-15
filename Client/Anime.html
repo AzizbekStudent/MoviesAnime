@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+
+    <div id="layout-container"></div>  <!-- For the layout -->
+
+    <div id="content">
+        <!-- Anime cards will be dynamically injected here -->
+    </div>
+
+    <script>
+        // Fetch and inject layout
+        fetch('./Layout.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('layout-container').innerHTML = data;
+                // Fetch and display the animes after layout is loaded
+                fetchAnimes(); // Calling the function to fetch the animes from Firebase
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+
+    <!--Firebase connection important libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+   
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+    </script>
+   
+    <!--For displaying charts-->    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--Script.js file-->
+    <script  type="text/javascript" src="./clientScript.js" ></script>
+
+
+</body>
+</html>

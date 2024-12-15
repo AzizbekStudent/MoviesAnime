@@ -1,0 +1,44 @@
+<!--Azizbek For Personal Usage-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/styles.css">
+</head>
+<body>
+    
+    
+    <div id="layout-container"></div> 
+
+    <div id="content">
+        <div class="category" id="cinema" onclick="window.location.href='./Movies.html'">
+            <img src="../Resources/images/movie.jpg" alt="Cinema" class="category-image">
+            <div class="category-name">Cinema</div>
+        </div>
+
+        <div class="category" id="anime" onclick="window.location.href='./Anime.html'">
+            <img src="../Resources/images/anime.jpg" alt="Anime" class="category-image">
+            <div class="category-name">Anime</div>
+        </div>
+
+        <div class="category" id="tv" onclick="window.location.href='./TV_Shows.html'">
+            <img src="../Resources/images/tv.jpg" alt="TV Shows" class="category-image">
+            <div class="category-name">TV Shows</div>
+        </div>
+    </div>
+
+    <!-- Script to dynamically load layout -->
+    <script>
+        fetch('layout.html')
+            .then(response => response.text())
+            .then(data => {
+                // Inject the layout content into the page
+                document.getElementById('layout-container').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading layout:', error));
+    </script>
+    <script  type="text/javascript" src="./clientScript.js" ></script>
+
+</body>
+</html>
